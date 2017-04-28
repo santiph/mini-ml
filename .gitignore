@@ -1,0 +1,6 @@
+node_modules
+.project
+.gitkeep
+npm-debug.log
+nbproject
+.settings
