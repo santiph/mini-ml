@@ -19,7 +19,7 @@ app.set('view engine', 'pug');
 
 // Sass support
 app.use(sassMiddleware({
-    src: path.join(__dirname, 'sass'),
+    src: path.join(__dirname, 'assets/sass'),
     dest: path.join(__dirname, 'public'),
     debug: true,
     outputStyle: 'compressed',

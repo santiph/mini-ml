@@ -1,0 +1,31 @@
+{
+  "name": "ml",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Santiago Petrone"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.2",
+    "chico": "^2.0.10",
+    "mesh": "git@github.com:mercadolibre/mesh.git"
+  },
+  "overrides": {
+    "tiny.js": {
+      "main": [ "./dist/tiny.min.js" ]
+    },
+    "mesh": {
+      "main": [ "./src/mesh.scss" ]
+    }
+  }
+}
