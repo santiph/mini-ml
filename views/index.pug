@@ -1,5 +1,18 @@
-extends layout
+doctype html
+html(class="no-js" lang="")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        title Mercado Libre
+        meta(name="description" content="Mercado Libre, Nunca dejes de buscar")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
 
-block content
-  h1= title
-  p Welcome to #{title}
+        link(rel='stylesheet', href='/stylesheets/vendor.css')
+        link(rel='stylesheet', href='/stylesheets/styles.css')
+        link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+    body
+        .container
+            .row
+                .col-xs-12
+                    div(ui-view='')
+                    p Hello world! This is Pug Boilerplate

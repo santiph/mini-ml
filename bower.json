@@ -16,16 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~4.2.2",
-    "chico": "^2.0.10",
-    "mesh": "git@github.com:mercadolibre/mesh.git"
+    "bootstrap-sass": "^3.3.7",
+    "angular": "1.6.4",
+    "angular-ui-router": "0.3.1",
+    "font-awesome": "^4.7.0"
   },
-  "overrides": {
-    "tiny.js": {
-      "main": [ "./dist/tiny.min.js" ]
-    },
-    "mesh": {
-      "main": [ "./src/mesh.scss" ]
-    }
-  }
+  "overrides": { }
 }

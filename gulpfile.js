@@ -10,9 +10,6 @@ requireDir('./gulp');
 gulp.task('default', function () {
     return sequence( 'clean',
         'build:favicon', // just to ensure /public is created before bower extraction
-        [ 'jsBowerExtract',
-        'cssBowerExtract',
-        'build',
-        'browser-sync' ],
+        [ 'bowerExtract', 'build', 'browser-sync' ],
         'watch' );
 });

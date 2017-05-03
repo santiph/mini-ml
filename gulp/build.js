@@ -3,7 +3,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-var paths = { 'destination': 'public/', 'assets': 'assets/' }; 
+var paths = {
+    'destination': 'public/',
+    'assets': 'assets/'
+}; 
 
 gulp.task('build', [
     'build:sass',
@@ -20,12 +23,15 @@ gulp.task('build:js', function () {
         .pipe(gulp.dest(paths.destination + 'javascripts'));
 });
 
-gulp.task('build:sass', [
-    'build:sass:ui'
-]);
-
-gulp.task('build:sass:ui', function () {
+gulp.task('build:sass', function () {
     return gulp.src(paths.assets + 'sass/styles.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            //outputStyle: 'compressed',
+            includePaths: [
+                'assets/sass',
+                'bower_components/bootstrap-sass/assets/stylesheets',
+                'bower_components/font-awesome/scss'
+            ]
+        }).on('error', sass.logError))
         .pipe(gulp.dest(paths.destination + 'stylesheets'));
 });
