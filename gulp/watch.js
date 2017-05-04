@@ -15,4 +15,5 @@ gulp.task('bs-reload', function () {
 gulp.task('watch', function () {
     gulp.watch('public/**/*.js',   [browserSync.reload]);
     gulp.watch('public/**/*.css',  ['css']);
+    gulp.watch('assets/sass/variables.scss',  ['scssCssBowerExtract']);
 });

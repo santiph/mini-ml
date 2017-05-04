@@ -1,0 +1,9 @@
+// Font Awesome
+$fa-font-path:   '../fonts';
+
+// Bootstrap variables override
+$grid-gutter-width: 16px;
+$navbar-padding-vertical: 10px; // Align vertically ML Logo
+$breadcrumb-separator: '>';
+
+@import 'bootstrap';

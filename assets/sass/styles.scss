@@ -1,8 +1,16 @@
-body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-}
+// Expand the search box in navigation bar
+.navbar-form {
+    padding-right: 0;
 
-a {
-  color: #00B7FF;
+     .form-group {
+         display: inline;
+
+         .input-group {
+             display: table;
+
+             .input-group-addon {
+                 width: 1%;
+             }
+         }
+     }
 }

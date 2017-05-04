@@ -1,18 +1,73 @@
 doctype html
-html(class="no-js" lang="")
+html(ng-app='mlApp' lang='')
     head
-        meta(charset="utf-8")
-        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
         title Mercado Libre
-        meta(name="description" content="Mercado Libre, Nunca dejes de buscar")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name='description' content='Mercado Libre, Nunca dejes de buscar')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
 
         link(rel='stylesheet', href='/stylesheets/vendor.css')
         link(rel='stylesheet', href='/stylesheets/styles.css')
         link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
     body
+        nav.navbar.navbar-default
+            .container
+                .row
+                    .col-xs-10.col-md-offset-1
+                        .navbar-header
+                            a.navbar-brand(href='#')
+                                img(alt='Mercado Libre', src='images/logo.png', width='47px')
+                        form.navbar-form(role='search')
+                            .form-group
+                                .input-group
+                                    input.form-control(name='search', placeholder='Nunca dejes de buscar', autocomplete='off', autofocus='autofocus', type='text')
+                                    span.input-group-addon
+                                        i.fa.fa-search(aria-hidden='true')
         .container
             .row
-                .col-xs-12
-                    div(ui-view='')
-                    p Hello world! This is Pug Boilerplate
+                .col-xs-10.col-md-offset-1
+                    ul.breadcrumb
+                        li
+                            a(href='#') Electrónica, Audio y Video
+                        li
+                            a(href='#') iPod
+                        li
+                            a(href='#') Reproductores
+                        li
+                            a(href='#') iPod touch
+                        li.active 32 GB
+            div(ui-view='')
+
+    script(src='app/vendor.js')
+
+    // Main app module
+    script(src='app/ml-app.module.js')
+    script(src='app/ml-app.config.js')
+
+    // Templates
+    script(src='app/ml-app.templates.js')
+
+    // ML Core
+    script(src='app/core/ml-core.module.js')
+
+    // ML Widgets
+    script(src='app/widgets/ml-widgets.module.js')
+
+    // ML Data
+    script(src='app/data/ml-data.module.js')
+
+    // Features
+    //    Homepage
+    script(src='app/features/homepage/homepage.module.js')
+    script(src='app/features/homepage/homepage.config.js')
+    script(src='app/features/homepage/homepage.controller.js')
+    //    Item Details
+    script(src='app/features/item-details/item-details.module.js')
+    script(src='app/features/item-details/item-details.config.js')
+    script(src='app/features/item-details/item-details.controller.js')
+    //    Search Results
+    script(src='app/features/search-results/search-results.module.js')
+    script(src='app/features/search-results/search-results.config.js')
+    script(src='app/features/search-results/search-results.controller.js')
+
