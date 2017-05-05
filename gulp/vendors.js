@@ -30,7 +30,7 @@ gulp.task('jsBowerExtract', function () {
 });
 
 gulp.task('scssCssBowerExtract', function () {
-    var filesCollection = [ paths.assets + 'sass/variables.scss' ]
+    var filesCollection = [ paths.assets + 'sass/vendors-config.scss' ]
         .concat(mainBowerFiles({ filter: scssCssFilter }));
 
     return gulp.src( filesCollection )

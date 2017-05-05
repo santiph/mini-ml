@@ -1,3 +1,4 @@
+@import '_variables';
 // Expand the search box in navigation bar
 .navbar-form {
     padding-right: 0;
@@ -11,6 +12,23 @@
              .input-group-addon {
                  width: 1%;
              }
+
+             input {
+                 font-size: 18px;
+             }
          }
      }
+}
+
+// Override text colors on Breadcrumbs element
+.ml.breadcrumb {
+
+    a {
+        color: $ml-gray;
+    }
+
+    .active {
+        color: $ml-gray;
+        font-weight: bold;
+    }
 }

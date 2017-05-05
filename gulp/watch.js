@@ -32,7 +32,7 @@ gulp.task('watch:scss', function () {
 });
 
 gulp.task('watch:scss:variables', function () {
-    return gulp.watch(paths.assets + 'sass/variables.scss', [ 'scssCssBowerExtract' ]);
+    return gulp.watch(paths.assets + 'sass/vendors-config.scss', [ 'scssCssBowerExtract' ]);
 });
 
 gulp.task('watch:templates', function () {

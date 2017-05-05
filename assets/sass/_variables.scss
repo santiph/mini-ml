@@ -1,0 +1,23 @@
+@import 'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables';
+
+// ML Colors & Variables
+$ml-gray:                       lighten($gray-base, 60%); // #999999
+$ml-gray-light:                 $gray-lighter;            // #eeeeee
+$ml-gray-dark:                  lighten($gray-base, 40%); // #666666
+$ml-gray-darker:                $gray-dark;               // #333333
+
+$ml-yellow:                     #ffe600;
+$ml-blue:                       #3483fa;
+
+// Bootstrap variables override
+$body-bg:                       $ml-gray-light;
+$navbar-default-bg:             $ml-yellow;
+
+$grid-gutter-width:             16px;
+$navbar-padding-vertical:       10px; // Align vertically ML Logo
+
+// Breadcrumbs
+$breadcrumb-bg:                 transparent;
+$breadcrumb-color:              $ml-gray;
+$breadcrumb-padding-horizontal: 0px;
+$breadcrumb-separator:          '>';
