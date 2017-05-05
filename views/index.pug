@@ -21,7 +21,11 @@ html(ng-app='mlApp' lang='')
                         form.navbar-form(role='search')
                             .form-group
                                 .input-group
-                                    input.form-control(name='search', placeholder='Nunca dejes de buscar', autocomplete='off', autofocus='autofocus', type='text')
+                                    input.form-control(name='search',
+                                        placeholder="{{ 'header.search-bar.placeholder' | translate }}",
+                                        autocomplete='off',
+                                        autofocus='autofocus',
+                                        type='text')
                                     span.input-group-addon
                                         i.fa.fa-search(aria-hidden='true')
         .container

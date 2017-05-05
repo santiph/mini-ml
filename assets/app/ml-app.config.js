@@ -17,8 +17,8 @@
             prefix: 'app/i18n/',
             suffix: '.json'
         });
-        $translateProvider.preferredLanguage('en');
-        $translateProvider.fallbackLanguage('en');
+        $translateProvider.preferredLanguage('es');
+        $translateProvider.fallbackLanguage('es');
         $translateProvider.useSanitizeValueStrategy('sanitize');
 
     }

@@ -1,0 +1,20 @@
+{
+    "header": {
+        "search-bar": {
+            "placeholder": "Nunca dejes de buscar"
+        }
+    },
+    "home-page": {
+        "title": "Inicio"
+    },
+    "item-details-page": {
+        "buy-button": "Comprar",
+        "description-section-title": "Descripción del Producto"
+    },
+    "items": {
+        "status": {
+            "new": "Nuevo",
+            "used": "Usado"
+        }
+    }
+}
