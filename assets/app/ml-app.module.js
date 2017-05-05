@@ -19,14 +19,16 @@
         ])
         .config(configuration);
 
-    configuration.$inject = ['$urlRouterProvider'];
-    function configuration($urlRouterProvider) {
+    configuration.$inject = ['$urlRouterProvider', '$locationProvider'];
+    function configuration($urlRouterProvider, $locationProvider) {
 
         configureRouter();
 
         //@todo: SOC - Store routing configurations into separate files
         function configureRouter() {
-            // For any unmatched url, redirect to /upgrade/prepare
+            $locationProvider.html5Mode(true);
+
+            // For any unmatched url, redirect to /
             $urlRouterProvider.otherwise('/');
         }
     }
