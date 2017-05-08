@@ -7,7 +7,6 @@
     "start-prod": "node ./bin/www"
   },
   "dependencies": {
-    "angular-ui-router": "^1.0.0",
     "body-parser": "~1.17.1",
     "bower": "^1.8.0",
     "browser-sync": "^2.18.8",
@@ -21,6 +20,7 @@
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "lodash": "^4.17.4",
     "main-bower-files": "^2.13.1",
     "morgan": "~1.8.1",
     "node-rest-client": "^3.1.0",
