@@ -20,6 +20,7 @@
          */
         'ui.bootstrap',     // ui-bootstrap (ex: carousel, pagination, dialog)
         'pascalprecht.translate',
-        'angular-loading-bar'
+        'angular-loading-bar',
+        'isoCurrency'
     ]);
 })();

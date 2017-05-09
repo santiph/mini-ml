@@ -1,0 +1,10 @@
+a(href='#', ui-sref='item-details({itemId: item.id})')
+    .row
+        .col-xs-10
+            img.ml-thumbnail.pull-left(ng-src='{{::item.picture}}')
+            .pull-left
+                ml-price(price='item.price')
+                ml-free-shipping(ng-if='item.free_shipping')
+                h2.item-title {{::item.title}}
+        .col-xs-2
+            .location Capital Federal

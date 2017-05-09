@@ -1,0 +1,78 @@
+@import '_variables';
+
+@mixin ml-margin-left($multiplier: 1) {
+    margin-left: $grid-gutter-width * $multiplier; // 16px
+}
+
+@mixin ml-margin-right($multiplier: 1) {
+    margin-right: $grid-gutter-width * $multiplier; // 16px
+}
+
+@mixin ml-margin-horizontal($multiplier: 1) {
+    @include ml-margin-left($multiplier);
+    @include ml-margin-right($multiplier);
+}
+
+@mixin ml-margin-top($multiplier: 1) {
+    margin-top: $grid-gutter-width * $multiplier; // 16px
+}
+
+@mixin ml-margin-bottom($multiplier: 1) {
+    margin-bottom: $grid-gutter-width * $multiplier; // 16px
+}
+
+@mixin ml-margin-vertical($multiplier: 1, $include-first: true, $include-last: true) {
+
+    @if $include-first and $include-last {
+        @include ml-margin-top($multiplier);
+        @include ml-margin-bottom($multiplier);
+
+    } @else if not $include-first and $include-last {
+        @include exclude-first() {
+            @include ml-margin-top($multiplier);
+        }
+        @include ml-margin-bottom($multiplier);
+
+    } @else if $include-first and not $include-last {
+        @include ml-margin-top($multiplier);
+        @include exclude-last() {
+            @include ml-margin-bottom($multiplier);
+        }
+
+    } @else {
+        @include exclude-first() {
+            @include ml-margin-top($multiplier);
+        }
+        @include exclude-last() {
+            @include ml-margin-bottom($multiplier);
+        }
+    }
+}
+
+@mixin vcenter() {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+@mixin ml-border-radius() {
+    border-radius: 4px;
+}
+
+@mixin exclude-first() {
+    &:not(:first-of-type) {
+        @content;
+    }
+}
+
+@mixin exclude-last() {
+    &:not(:last-of-type) {
+        @content;
+    }
+}
+
+@mixin exclude-first-and-last() {
+    &:not(:first-of-type):not(:last-of-type) {
+        @content;
+    }
+}

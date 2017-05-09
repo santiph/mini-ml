@@ -1,0 +1,2 @@
+ul.breadcrumb(ng-if='links')
+    li(ng-repeat='link in links', ng-class='{active: $last}') {{link.text}}

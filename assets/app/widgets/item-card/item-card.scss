@@ -1,0 +1,37 @@
+@import '../_ml-mixins';
+ml-item-card {
+    display: block;
+
+    a {
+        color: $gray-base;
+    }
+
+    .ml-thumbnail {
+        @include ml-margin-horizontal();
+        @include ml-border-radius();
+        height: 180px;
+        width: 180px;
+    }
+
+    ml-free-shipping,
+    ml-price {
+        @include ml-margin-vertical(2);
+        @include vcenter();
+    }
+
+    ml-price {
+        margin-right: 8px;
+    }
+
+    .item-title {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .location {
+        @include ml-margin-top(2);
+        font-size: 12px;
+    }
+}

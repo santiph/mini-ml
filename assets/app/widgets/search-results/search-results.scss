@@ -1,0 +1,22 @@
+@import '../_ml-mixins';
+//@import '../_ml-mixins';
+ml-search-results {
+    @include ml-border-radius();
+    display: block;
+    background-color: $ml-white;
+
+    .result-row {
+        &:first-of-type {
+            @include ml-margin-top();
+        }
+        &:last-of-type {
+            @include ml-margin-bottom();
+        }
+    }
+
+    hr {
+        @include ml-margin-vertical();
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

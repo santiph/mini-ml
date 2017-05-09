@@ -3,8 +3,10 @@
 // ML Colors & Variables
 $ml-gray:                       lighten($gray-base, 60%); // #999999
 $ml-gray-light:                 $gray-lighter;            // #eeeeee
+$ml-gray-lighter:               lighten($gray-base, 91%); // #e8e8e8
 $ml-gray-dark:                  lighten($gray-base, 40%); // #666666
 $ml-gray-darker:                $gray-dark;               // #333333
+$ml-white:                      #ffffff;
 
 $ml-yellow:                     #ffe600;
 $ml-blue:                       #3483fa;
@@ -19,5 +21,9 @@ $navbar-padding-vertical:       10px; // Align vertically ML Logo
 // Breadcrumbs
 $breadcrumb-bg:                 transparent;
 $breadcrumb-color:              $ml-gray;
+$breadcrumb-active-color:       $ml-gray;
 $breadcrumb-padding-horizontal: 0px;
 $breadcrumb-separator:          '>';
+
+// Horizontal Separator
+$hr-border:                     $ml-gray-lighter;

@@ -14,7 +14,7 @@
        */
         $stateProvider
             .state('search-results', {
-                url: '/items?q={searchQuery}',
+                url: '/items?q',
                 templateUrl: 'app/features/search-results/templates/search-results.html',
                 controller: 'SearchResultsController',
                 controllerAs: 'searchResultsControllerVm'
