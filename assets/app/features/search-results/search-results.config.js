@@ -16,8 +16,8 @@
             .state('search-results', {
                 url: '/items?q={searchQuery}',
                 templateUrl: 'app/features/search-results/templates/search-results.html',
-                controller: 'ItemDetailsController',
-                controllerAs: 'itemDetailsControllerVm'
+                controller: 'SearchResultsController',
+                controllerAs: 'searchResultsControllerVm'
             });
     }
 })();
