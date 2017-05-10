@@ -14,7 +14,7 @@
        */
         $stateProvider
             .state('item-details', {
-                url: '/items/{itemId}',
+                url: '/items/:itemId',
                 templateUrl: 'app/features/item-details/templates/item-details.html',
                 controller: 'ItemDetailsController',
                 controllerAs: 'itemDetailsControllerVm'

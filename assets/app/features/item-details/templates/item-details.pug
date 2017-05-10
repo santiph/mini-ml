@@ -2,11 +2,22 @@
     .col-xs-10.col-md-offset-1
         ml-breadcrumbs(links='[{text: "Electrónica, Audio y Video"}, {text: "Accesorios para Audio y Video"}, {text: "Media Streaming"}, {text: "Chromecast"}]')
 .row
-    .col-xs-7.col-md-offset-1
-        | Picture
-    .col-xs-3
-        | Item details
-.row.description-container
-    .col-xs-7.col-md-offset-1
-        h1(translate='') item-details-page.description-section-title
-        p El Edificio Chrysler (en inglés, Chrysler Building) es un rascacielos de estilo art déco situado en la intersección de la Calle 42 con Lexington Avenue, en el East Side de Midtown Manhattan, Nueva York, en el barrio de Turtle Bay. Con 77 plantas y 319 metros de altura, fue el edificio más alto del mundo durante once meses, hasta que lo superó el Empire State Building en 1931. Sigue siendo el edificio de ladrillos más alto del mundo, aunque su estructura es de acero.
+    .col-xs-10.col-md-offset-1
+        .item-details-page
+            .row
+                .col-xs-9
+                    img.item-picture(ng-src='{{::itemDetailsControllerVm.item.picture}}')
+                    .description
+                        h2.title(translate='') item-details-page.description-section-title
+                        p.text.text-capitalize(ng-bind-html='::itemDetailsControllerVm.item.description')
+                .col-xs-3
+                    .item-details
+                        .extra-info
+                            span(translate='{{"item-details-page.item-details.condition." + itemDetailsControllerVm.item.condition}}') - 
+                            span  - 
+                            span(
+                                translate='item-details-page.item-details.sold',
+                                translate-values='{"quantity": itemDetailsControllerVm.item.sold_quantity}')
+                        h1 {{::itemDetailsControllerVm.item.title}}
+                        ml-price(price='::itemDetailsControllerVm.item.price')
+                        button.btn.btn-primary.btn-block(type='button', translate='') item-details-page.buy-button

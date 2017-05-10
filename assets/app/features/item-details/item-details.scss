@@ -1,0 +1,57 @@
+@import 'bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_image';
+.item-details-page {
+    @include ml-border-radius();
+    display: block;
+    background-color: $ml-white;
+
+    .item-details,
+    .item-picture  {
+        @include ml-margin-top(2);
+    }
+
+    .item-details {
+        @include ml-margin-right(2);
+
+        .extra-info {
+            line-height: 1;
+        }
+
+        h1 {
+            @include ml-margin-top();
+            @include ml-margin-bottom(0);
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        ml-price {
+            @include ml-margin-vertical(2);
+            font-size: 46px;
+        }
+
+    }
+
+    .item-picture {
+        @include ml-margin-left(2);
+        width: 680px;
+    }
+
+    // Keep images from scaling beyond the width of their parents.
+    .description {
+        @include ml-margin-horizontal(2);
+
+        .title {
+            @include ml-margin-vertical(2);
+            font-size: 28px;
+        }
+
+        .text {
+            @include ml-margin-bottom(2);
+            font-size: 16px;
+            font-weight: normal;
+
+            img {
+                @include img-responsive();
+            }
+        }
+    } 
+}

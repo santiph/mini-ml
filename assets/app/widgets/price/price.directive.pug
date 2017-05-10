@@ -1,1 +1,1 @@
-span {{::price.amount + price.decimals / 100 | isoCurrency:price.currency}}
+span {{price.amount + price.decimals / 100 | isoCurrency:price.currency:0}}

@@ -13,10 +13,14 @@ $ml-blue:                       #3483fa;
 
 // Bootstrap variables override
 $body-bg:                       $ml-gray-light;
+$grid-gutter-width:             16px;
+
+// Navigation Bar
+$navbar-padding-vertical:       10px; // Align vertically ML Logo
 $navbar-default-bg:             $ml-yellow;
 
-$grid-gutter-width:             16px;
-$navbar-padding-vertical:       10px; // Align vertically ML Logo
+// Buttons
+$btn-primary-bg:                $ml-blue;
 
 // Breadcrumbs
 $breadcrumb-bg:                 transparent;

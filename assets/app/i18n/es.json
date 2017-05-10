@@ -9,7 +9,14 @@
     },
     "item-details-page": {
         "buy-button": "Comprar",
-        "description-section-title": "Descripción del Producto"
+        "description-section-title": "Descripción del Producto",
+        "item-details": {
+            "condition": {
+                "new": "Nuevo",
+                "used": "Usado"
+            },
+            "sold": "{{quantity}} vendidos"
+        }
     },
     "items": {
         "status": {

@@ -31,3 +31,5 @@
 body > .container {
     @include ml-margin-bottom(5);
 }
+
+@import '../app/features/item-details/item-details';

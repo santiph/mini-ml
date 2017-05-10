@@ -7,13 +7,13 @@
     angular.module('mlApp.item-details')
         .controller('ItemDetailsController', ItemDetailsController);
 
-    ItemDetailsController.$inject = [ '$translate', 'itemsFactory' ];
+    ItemDetailsController.$inject = [ '$translate', 'itemsFactory', '$stateParams' ];
     // @ngInject
-    function ItemDetailsController($translate, itemsFactory) {
+    function ItemDetailsController($translate, itemsFactory, $stateParams) {
         var vm = this;
 
         // TODO: Get itemId from request
-        itemsFactory.getItemDetails('MLU444625290')
+        itemsFactory.getItemDetails($stateParams.itemId)
             .then(
                 function (response) {
                     vm.item = response.data;
