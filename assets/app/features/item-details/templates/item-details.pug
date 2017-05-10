@@ -6,7 +6,7 @@
         .item-details-page
             .row
                 .col-xs-9
-                    img.item-picture(ng-src='{{::itemDetailsControllerVm.item.picture}}')
+                    img.item-picture(ng-src='{{::itemDetailsControllerVm.item.picture.variations.large.url}}')
                     .description
                         h2.title(translate='') item-details-page.description-section-title
                         p.text.text-capitalize(ng-bind-html='::itemDetailsControllerVm.item.description')

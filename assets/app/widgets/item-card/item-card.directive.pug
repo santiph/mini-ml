@@ -1,7 +1,7 @@
 a(href='#', ui-sref='item-details({itemId: item.id})')
     .row
         .col-xs-10
-            img.ml-thumbnail.pull-left(ng-src='{{::item.picture}}')
+            img.ml-thumbnail.pull-left(ng-src='{{::item.picture.variations.small.url}}')
             .pull-left
                 ml-price(price='item.price')
                 ml-free-shipping(ng-if='item.free_shipping')
