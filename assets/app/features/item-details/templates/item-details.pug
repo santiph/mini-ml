@@ -1,16 +1,13 @@
 .row
-    .col-xs-10.col-md-offset-1
+    .col-lg-10.col-lg-offset-1
         ml-breadcrumbs(links='itemDetailsControllerVm.categories')
 .row
-    .col-xs-10.col-md-offset-1
+    .col-lg-10.col-lg-offset-1
         .item-details-page
             .row
-                .col-xs-9
+                .col-sm-9
                     img.item-picture(ng-src='{{::itemDetailsControllerVm.item.picture.variations.large.url}}')
-                    .description
-                        h2.title(translate='') item-details-page.description-section-title
-                        p.text.text-capitalize(ng-bind-html='::itemDetailsControllerVm.item.description')
-                .col-xs-3
+                .col-sm-3
                     .item-details
                         .extra-info
                             span(translate='{{"item-details-page.item-details.condition." + itemDetailsControllerVm.item.condition}}') - 
@@ -21,3 +18,7 @@
                         h1 {{::itemDetailsControllerVm.item.title}}
                         ml-price(price='::itemDetailsControllerVm.item.price')
                         button.btn.btn-primary.btn-block(type='button', translate='') item-details-page.buy-button
+                .col-sm-9
+                    .description
+                        h2.title(translate='') item-details-page.description-section-title
+                        p.text.text-capitalize(ng-bind-html='::itemDetailsControllerVm.item.description')

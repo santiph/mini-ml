@@ -13,7 +13,9 @@ $ml-blue:                       #3483fa;
 
 // Bootstrap variables override
 $body-bg:                       $ml-gray-light;
-$grid-gutter-width:             16px;
+$grid-gutter-width:             18px;
+$container-large-desktop:       1198px;
+$container-lg:                  $container-large-desktop;
 
 // Navigation Bar
 $navbar-padding-vertical:       10px; // Align vertically ML Logo
