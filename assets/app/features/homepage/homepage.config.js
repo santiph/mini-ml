@@ -19,5 +19,5 @@
                 controller: 'HomepageController',
                 controllerAs: 'homepageControllerVm'
             });
-    }
+    };
 })();

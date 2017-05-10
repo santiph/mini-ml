@@ -1,6 +1,10 @@
 (function() {
     'use strict';
 
+    /**
+     * @desc Price directive to display prices according with different ISO currencies
+     * @example <ml-price price="{amount: '390', decimals: '20', currency: 'ARS'}"></ml-price>
+     */
     angular
         .module('mlWidgets')
         .directive('mlPrice', crowbarHeader);
@@ -13,5 +17,5 @@
                 price: '='
             }
         };
-    }
+    };
 })();

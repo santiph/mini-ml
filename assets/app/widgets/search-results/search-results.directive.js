@@ -1,6 +1,10 @@
 (function() {
     'use strict';
 
+    /**
+     * @desc Search results directive to display a collection of itemCards
+     * @example <ml-search-results results="{results}"></ml-search-results>
+     */
     angular
         .module('mlWidgets')
         .directive('mlSearchResults', crowbarHeader);
@@ -13,5 +17,5 @@
                 results: '='
             }
         };
-    }
+    };
 })();

@@ -13,29 +13,32 @@
         var vm = this;
         vm.categories = [];
 
-        // TODO: Get query from request
-        itemsFactory.getSearchResults($stateParams.q)
-            .then(
-                function (response) {
-                    vm.searchResults = response.data.results;
+        activate();
 
-                    breadcrumbs(response.data.categories[0]);
-                },
-                function (errorResponse) {
-                    console.log(errorResponse);
-                }
-            );
+        function activate() {
+            itemsFactory.getSearchResults($stateParams.q)
+                .then(
+                    function (response) {
+                        vm.searchResults = response.data.results;
 
-            function breadcrumbs(categoryId) {
-                categoriesFactory.getPathFromRoot(categoryId)
-                    .then(
-                        function (response) {
-                            vm.categories = response.data;
-                        },
-                        function (errorResponse) {
-                            console.log(errorResponse);
-                        }
-                    );
-            }
-    }
+                        breadcrumbs(response.data.categories[0]);
+                    },
+                    function (errorResponse) {
+                        console.log(errorResponse);
+                    }
+                );
+        };
+
+        function breadcrumbs(categoryId) {
+            categoriesFactory.getPathFromRoot(categoryId)
+                .then(
+                    function (response) {
+                        vm.categories = response.data;
+                    },
+                    function (errorResponse) {
+                        console.log(errorResponse);
+                    }
+                );
+        };
+    };
 })();

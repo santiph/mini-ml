@@ -18,7 +18,7 @@
         /**
          * Get Item Details
          *
-         * @param {Number} itemId Item Id to get details for
+         * @param {String} itemId Item Id to get details for
          * @return {Promise} Returns the a promise to be resolved as the item details.
          * @throws Will throw an error if the itemId is null.
          */
@@ -35,7 +35,7 @@
             };
 
             return $http(requestOptions);
-        }
+        };
 
         /**
          * Get Search Results
@@ -58,6 +58,6 @@
             };
 
             return $http(requestOptions);
-        }
+        };
     }
 })();

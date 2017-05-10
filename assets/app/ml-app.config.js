@@ -21,5 +21,5 @@
         $translateProvider.fallbackLanguage('es');
         $translateProvider.useSanitizeValueStrategy('sanitize');
 
-    }
+    };
 })();

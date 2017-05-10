@@ -19,5 +19,5 @@
                 controller: 'ItemDetailsController',
                 controllerAs: 'itemDetailsControllerVm'
             });
-    }
+    };
 })();

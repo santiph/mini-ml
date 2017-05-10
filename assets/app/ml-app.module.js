@@ -10,9 +10,9 @@
             'mlData',
             'mlWidgets',
 
-            /*
-            * Feature areas
-            */
+            /**
+             * Feature areas
+             */
             'mlApp.homepage',
             'mlApp.search-results',
             'mlApp.item-details',
@@ -31,5 +31,5 @@
             // For any unmatched url, redirect to /
             $urlRouterProvider.otherwise('/');
         }
-    }
+    };
 })();

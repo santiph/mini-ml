@@ -19,5 +19,5 @@
                 controller: 'SearchResultsController',
                 controllerAs: 'searchResultsControllerVm'
             });
-    }
+    };
 })();
