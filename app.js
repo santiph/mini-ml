@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 var home = require('./lib/home');
 var apiItems = require('./lib/api/items');
+var apiCategories = require('./lib/api/categories');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/items', apiItems);
+app.use('/api/categories', apiCategories);
 app.use(['/*'], home);
 
 // catch 404 and forward to error handler
