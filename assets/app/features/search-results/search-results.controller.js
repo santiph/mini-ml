@@ -7,21 +7,35 @@
     angular.module('mlApp.search-results')
         .controller('SearchResultsController', SearchResultsController);
 
-    SearchResultsController.$inject = [ '$translate', 'itemsFactory', '$stateParams' ];
+    SearchResultsController.$inject = [ '$translate', 'itemsFactory', 'categoriesFactory', '$stateParams' ];
     // @ngInject
-    function SearchResultsController($translate, itemsFactory, $stateParams) {
+    function SearchResultsController($translate, itemsFactory, categoriesFactory, $stateParams) {
         var vm = this;
+        vm.categories = [];
 
         // TODO: Get query from request
         itemsFactory.getSearchResults($stateParams.q)
             .then(
                 function (response) {
                     vm.searchResults = response.data.results;
-                    vm.categories = response.data.categories;
+
+                    breadcrumbs(response.data.categories[0]);
                 },
                 function (errorResponse) {
                     console.log(errorResponse);
                 }
             );
+
+            function breadcrumbs(categoryId) {
+                categoriesFactory.getPathFromRoot(categoryId)
+                    .then(
+                        function (response) {
+                            vm.categories = response.data;
+                        },
+                        function (errorResponse) {
+                            console.log(errorResponse);
+                        }
+                    );
+            }
     }
 })();
